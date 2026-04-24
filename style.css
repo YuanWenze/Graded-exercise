@@ -1,0 +1,334 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+@font-face {
+  font-family: 'Mansalva';
+  src: url('Mansalva-Regular.ttf') format('truetype');
+}
+
+.hero {
+  position: relative;
+  width: 95%;
+  margin: 0 auto;
+  min-height: 80vh;
+  background-color: #7fb3c8;
+  background-image: url('assets/bg-totoro.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px 40px 40px 40px;
+}
+
+.title-gif-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.ponyo-gif {
+  width: 150px;
+  height: auto;
+}
+
+.hero h1 {
+  font-family: 'Mansalva', cursive;
+  font-size: 52px;
+  color: #ffffff;
+}
+
+.hero-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.hero-video {
+  width: 68%;
+  border-radius: 12px;
+  border: 5px solid black;
+  background-color: black;
+  line-height: 0;
+}
+
+.hero-video video {
+  width: 100%;
+  display: block;
+}
+
+.totoro-img {
+  width: 28%;
+  max-width: 300px;
+}
+
+.sticky-nav {
+  position: sticky;
+  top: 0;
+  width: 95%;
+  margin: 0 auto;
+  background-color: #f4cccc;
+  z-index: 100;
+  border-radius: 0 0 12px 12px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 300px;
+  padding: 12px;
+  list-style: none;
+}
+
+.nav-links a {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+  color: #333;
+  font-weight: normal;
+}
+
+.nav-links a:hover {
+  color: #d9534f;
+}
+
+.movies-section {
+  padding: 30px 20px;
+}
+
+.movies-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.movie-card {
+  position: relative;
+  width: 250px;
+  height: 370px;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  color: white;
+}
+
+.movie-card:hover .overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+.overlay h3 {
+  font-size: 18px;
+  margin-bottom: 12px;
+  color: white;
+  font-weight: bold;
+}
+
+.overlay p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #ddd;
+}
+
+.maestro-section {
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.maestro-wrapper {
+  display: flex;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.miyazaki-img {
+  width: 42%;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.miyazaki-img:hover {
+  transform: scale(1.05);
+}
+
+.miyazaki-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.quote-box {
+  width: 58%;
+  background: #9ccc65;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  border: 3px solid transparent;
+}
+
+.quote-box:hover {
+  background-color: white;
+  border: 3px solid #9ccc65;
+  transform: scale(1.02);
+}
+
+.quote-text {
+  font-size: 22px;
+  font-style: italic;
+  text-align: center;
+  color: #333;
+}
+
+.quote-author {
+  margin-top: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+footer {
+  text-align: center;
+  padding: 12px;
+  background: #ffe0b2;
+  font-size: 13px;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    width: 100%;
+    margin: 0;
+    min-height: auto;
+  }
+
+  .sticky-nav {
+    width: 100%;
+    margin: 0;
+    border-radius: 0 0 12px 12px;
+  }
+
+  .hero-content {
+    padding: 15px 20px 25px 20px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .ponyo-gif {
+    width: 50px;
+  }
+
+  .hero-main {
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .hero-video {
+    width: 68%;
+    border: 3px solid black;
+  }
+
+  .totoro-img {
+    width: 28%;
+    max-width: 150px;
+  }
+
+  .nav-links {
+    gap: 80px;
+    padding: 10px;
+  }
+
+  .movie-card {
+    width: 45%;
+    height: auto;
+  }
+
+  .card-img {
+    height: auto;
+    object-fit: contain;
+  }
+
+  .overlay h3 {
+    font-size: 14px;
+  }
+
+  .overlay p {
+    font-size: 15px;
+  }
+
+  .maestro-wrapper {
+    flex-direction: column;
+  }
+
+  .miyazaki-img {
+    width: 100%;
+  }
+
+  .quote-box {
+    width: 100%;
+    padding: 25px 20px;
+  }
+
+  .quote-text {
+    font-size: 16px;
+  }
+}
